@@ -1,0 +1,44 @@
+﻿@model SieuThi.Models.SalesReport
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<div class="container" style="text-align:center">
+    <h1 class="MSM_green">Edit</h1>
+
+    <h4>SalesReport</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="MaBaoCao" />
+                <div class="form-group">
+                    <label asp-for="Ngay" class="control-label"></label>
+                    <input asp-for="Ngay" class="form-control" />
+                    <span asp-validation-for="Ngay" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DoanhThu" class="control-label"></label>
+                    <input asp-for="DoanhThu" class="form-control" />
+                    <span asp-validation-for="DoanhThu" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <!--____________________________________________________________-->
+    <div>
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

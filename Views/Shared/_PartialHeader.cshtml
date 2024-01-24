@@ -1,0 +1,51 @@
+﻿<header class="header">
+    <div class="header__top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__left">
+                        <ul>
+                            <li><a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-envelope"></i></a></li>
+                            <li><b class="MSM_green">Mini Supermarket Management</b></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__right">
+                        <div class="header__top__right__social">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-facebook"></i></a>
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-twitter"></i></a>
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <div class="header__top__right__auth">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-user"></i> Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="header__logo" style="text-align: center">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")"><img src="~/img/logo.jpg" alt="" width="60" height="60"></a>
+                </div>
+            </div>
+            <div class="col-lg-9" style="float:right">
+                <nav class="header__menu">
+                    <ul>
+                        <li><a class="nav-link" href="@Url.Action("Index", "Product")">Product Portfolio</a></li>
+                        <li><a class="nav-link" href="@Url.Action("Index", "SalesManagement")">Sales Management</a></li>
+                        <li><a class="nav-link" href="@Url.Action("Index", "Stored")">Stored</a></li>
+                        <li><a class="nav-link" href="@Url.Action("Index", "SalesReport")">Sales Report</a></li>
+                        <li><a class="nav-link" href="@Url.Action("Index", "Staff")">Staff</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="humberger__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>

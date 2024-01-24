@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SieuThi.Models.SalesReport>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<div class="container" style="text-align:center">
+    <h1 class="MSM_green">Báo Cáo</h1>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ngay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DoanhThu)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ngay)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DoanhThu)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.MaBaoCao" class="btn btn-primary">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.MaBaoCao" class="btn btn-primary">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.MaBaoCao" class="btn btn-primary">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

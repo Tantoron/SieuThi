@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SieuThi.Models.Staff>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<div class="container" style="text-align:center">
+    <h1 class="MSM_green">Nhân Viên</h1>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tennv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Luong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MotaCV)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tennv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Luong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MotaCV)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Manv" class="btn btn-primary">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Manv" class="btn btn-primary">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Manv" class="btn btn-primary">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
